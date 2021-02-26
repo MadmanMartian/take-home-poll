@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 from .models import PollResult
 """
@@ -46,7 +46,7 @@ def submit(request):
 	# Always return an HttpResponseRedirect after successfully dealing
 	# with POST data. This prevents data from being posted twice if a
 	# user hits the Back button.
-	return HttpResponseRedirect(reverse('results'))
+	return HttpResponseRedirect('results')
 
 
 """

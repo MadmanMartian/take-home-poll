@@ -21,5 +21,6 @@ from poll import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="index.html")),
+    path('results/', TemplateView.as_view(template_name="results.html")),
     path('submit/', views.submit, name='submit'),
 ]
